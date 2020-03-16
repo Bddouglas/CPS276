@@ -23,7 +23,7 @@ $name = $post['name'];
 
 $nameArr = explode(" ", $name);
 
-//print_r($nameArr);
+
 
 //convert string to an array explode;
 //once an array then switch first and last name and add comma
@@ -31,12 +31,12 @@ $nameArr = explode(" ", $name);
 
 $nm = $nameArr[1] . ", " . $nameArr[0];
 
-//echo $nm;
+
 
 if($post['namelist'] != ""){
     //expode on what? \n
     $masterarr = explode("\n", $post['namelist']);
-    //$masterArr will equal the array exploded on
+    
     array_push($masterarr, $nm);
 
     //print_r($masterArr);
@@ -48,13 +48,12 @@ if($post['namelist'] != ""){
     //return $output;
 }
 else {
-    //echo $nm;
+    
     return $nm . "\n";
 }
 
 
-//$names = [$name];
-//$output = $names;
+
 
 }
 
