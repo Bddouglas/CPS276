@@ -41,11 +41,11 @@ class NameFile{
         fwrite($handle,$_POST['fileContent'] );
         fclose($handle);
         
+        $directoryName = $_POST['folderName'];
+        $filepath = "<p><a href='http://157.245.90.140/cps276/assignments/assignment5/Directories/{$directoryName}/readme.txt'>Path were file is located</a></p>";
+       // return "Directory created successfully:" . " ". '<a href="http://157.245.90.140/cps276/assignments/assignment5/Directories/$_POST[folderName]/readme.txt">Link to file</a>';
         
-        
-        return "Directory created successfully:" . " ". '<a href="http://157.245.90.140/cps276/assignments/assignment5/Directories/$_POST[folderName]/readme.txt">Link to file</a>';
-        
-
+            return "Directory created successfully: " .$filepath;
         
     }
 
