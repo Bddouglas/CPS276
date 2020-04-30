@@ -1,0 +1,5 @@
+CREATE TABLE names (
+ ID int NOT NULL AUTO_INCREMENT,
+ cust_name char(255) NULL,
+ PRIMARY KEY (ID)
+) ENGINE = InnoDB;

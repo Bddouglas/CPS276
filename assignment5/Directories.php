@@ -1,19 +1,5 @@
 
 
-<?php
-
-$output = "";
-
-
-if(isset($_POST['upload'])){
-  require_once 'FileUploadProc.php';
-  $addName = new upload();
-  //print_r($_POST);
-  $output = $addName->uploadF($_POST);
- }
-?>
-
-
 
 
 <!doctype html>
@@ -29,23 +15,22 @@ if(isset($_POST['upload'])){
     <title>Add to File</title>
   </head>
   <body>
-  <div class="container">
     <h1>File and Directory Assignment</h1>
 
-    <p><?php echo $output; ?></p>
-    
-    <form method="post" action="#">
+    <form>
   <div class="form-group">
-    <label for="name">File Name</label> 
-    <input type="string" class="form-control" id="name" name="folderName">
+    <label for="exampleInputEmail1">Add name to file</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     
   </div>
   
-  
-  
-  <button type="upload" class="btn btn-primary" name="upload">upload</button>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1"> File content</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-</div>
     
   </body>
 </html>
